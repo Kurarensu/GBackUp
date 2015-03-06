@@ -1,0 +1,12 @@
+C:\Users\Kurarensu\Desktop\Pending Works\Gbackup\gdocbackup\GDocBackupCMD\bin\Debug\GDocBackupCMD.exe
+C:\Users\Kurarensu\Desktop\Pending Works\Gbackup\gdocbackup\GDocBackupCMD\bin\Debug\GDocBackupCMD.pdb
+C:\Users\Kurarensu\Desktop\Pending Works\Gbackup\gdocbackup\GDocBackupCMD\bin\Debug\GDocBackupLib.dll
+C:\Users\Kurarensu\Desktop\Pending Works\Gbackup\gdocbackup\GDocBackupCMD\bin\Debug\Google.GData.Client.dll
+C:\Users\Kurarensu\Desktop\Pending Works\Gbackup\gdocbackup\GDocBackupCMD\bin\Debug\Google.GData.Documents.dll
+C:\Users\Kurarensu\Desktop\Pending Works\Gbackup\gdocbackup\GDocBackupCMD\bin\Debug\Google.GData.Apps.dll
+C:\Users\Kurarensu\Desktop\Pending Works\Gbackup\gdocbackup\GDocBackupCMD\bin\Debug\Google.GData.Extensions.dll
+C:\Users\Kurarensu\Desktop\Pending Works\Gbackup\gdocbackup\GDocBackupCMD\bin\Debug\Google.GData.AccessControl.dll
+C:\Users\Kurarensu\Desktop\Pending Works\Gbackup\gdocbackup\GDocBackupCMD\bin\Debug\GDocBackupLib.pdb
+C:\Users\Kurarensu\Desktop\Pending Works\Gbackup\gdocbackup\GDocBackupCMD\obj\Debug\GDocBackupCMD.csprojResolveAssemblyReference.cache
+C:\Users\Kurarensu\Desktop\Pending Works\Gbackup\gdocbackup\GDocBackupCMD\obj\Debug\GDocBackupCMD.exe
+C:\Users\Kurarensu\Desktop\Pending Works\Gbackup\gdocbackup\GDocBackupCMD\obj\Debug\GDocBackupCMD.pdb

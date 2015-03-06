@@ -1,0 +1,12 @@
+C:\Users\Kurarensu\Desktop\Pending Works\Gbackup\gdocbackup\DevAppGUI\bin\Debug\DevAppGUI.exe
+C:\Users\Kurarensu\Desktop\Pending Works\Gbackup\gdocbackup\DevAppGUI\bin\Debug\DevAppGUI.pdb
+C:\Users\Kurarensu\Desktop\Pending Works\Gbackup\gdocbackup\DevAppGUI\bin\Debug\Google.GData.AccessControl.dll
+C:\Users\Kurarensu\Desktop\Pending Works\Gbackup\gdocbackup\DevAppGUI\bin\Debug\Google.GData.Client.dll
+C:\Users\Kurarensu\Desktop\Pending Works\Gbackup\gdocbackup\DevAppGUI\bin\Debug\Google.GData.Documents.dll
+C:\Users\Kurarensu\Desktop\Pending Works\Gbackup\gdocbackup\DevAppGUI\bin\Debug\Google.GData.Extensions.dll
+C:\Users\Kurarensu\Desktop\Pending Works\Gbackup\gdocbackup\DevAppGUI\obj\Debug\DevAppGUI.csprojResolveAssemblyReference.cache
+C:\Users\Kurarensu\Desktop\Pending Works\Gbackup\gdocbackup\DevAppGUI\obj\Debug\DevAppGUI.MainForm.resources
+C:\Users\Kurarensu\Desktop\Pending Works\Gbackup\gdocbackup\DevAppGUI\obj\Debug\DevAppGUI.Properties.Resources.resources
+C:\Users\Kurarensu\Desktop\Pending Works\Gbackup\gdocbackup\DevAppGUI\obj\Debug\DevAppGUI.csproj.GenerateResource.Cache
+C:\Users\Kurarensu\Desktop\Pending Works\Gbackup\gdocbackup\DevAppGUI\obj\Debug\DevAppGUI.exe
+C:\Users\Kurarensu\Desktop\Pending Works\Gbackup\gdocbackup\DevAppGUI\obj\Debug\DevAppGUI.pdb
