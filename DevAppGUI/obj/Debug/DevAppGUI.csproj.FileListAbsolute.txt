@@ -10,3 +10,5 @@ C:\Users\Kurarensu\Desktop\Pending Works\Gbackup\gdocbackup\DevAppGUI\obj\Debug\
 C:\Users\Kurarensu\Desktop\Pending Works\Gbackup\gdocbackup\DevAppGUI\obj\Debug\DevAppGUI.csproj.GenerateResource.Cache
 C:\Users\Kurarensu\Desktop\Pending Works\Gbackup\gdocbackup\DevAppGUI\obj\Debug\DevAppGUI.exe
 C:\Users\Kurarensu\Desktop\Pending Works\Gbackup\gdocbackup\DevAppGUI\obj\Debug\DevAppGUI.pdb
+C:\Users\Kurarensu\Documents\GitHub\GBackUp\DevAppGUI\obj\Debug\DevAppGUI.exe
+C:\Users\Kurarensu\Documents\GitHub\GBackUp\DevAppGUI\obj\Debug\DevAppGUI.pdb

@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Text;
 using System.Threading;
+using Google.Apis.Drive.v2;
+using Google.Apis.Auth.OAuth2;
+using Google.Apis.Util.Store;
+using Google.Apis.Services;
+using Google.Apis.Drive.v2.Data;
+[assembly: log4net.Config.XmlConfigurator(Watch = true)]
 
 namespace GDocBackup
 {
@@ -14,6 +20,16 @@ namespace GDocBackup
         [STAThread]
         public static void Main(string[] args)
         {
+            // Connect with Oauth2 Ask user for permission
+            String CLIENT_ID = "363720865617-54cf693mpj3h4g50snclba0laogvcqcs.apps.googleusercontent.com";
+            String CLIENT_SECRET = "NDmluNfTgUk6wgmy7cFo64RV";
+            // DriveService service = Authentication.AuthenticateOauth(CLIENT_ID, CLIENT_SECRET, Environment.UserName);
+
+
+            // connect with a Service Account
+            string ServiceAccountEmail = "363720865617-54cf693mpj3h4g50snclba0laogvcqcs@developer.gserviceaccount.com";
+            string serviceAccountkeyFile = @"D:\DevAcount\GDocBackup-d0b07ce41d82.p12";
+            DriveService service = Authentication.AuthenticateServiceAccount(ServiceAccountEmail, serviceAccountkeyFile);
             AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
             Application.ThreadException += new System.Threading.ThreadExceptionEventHandler(Application_ThreadException);
 

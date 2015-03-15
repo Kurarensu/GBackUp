@@ -44,45 +44,14 @@ namespace GDocBackup
         private void LoginForm_Load(object sender, EventArgs e)
         {
             this.Icon = Properties.Resources.Logo;
+            UsernameTB.Text = conf.UserName;
+            PasswordTB.Text = String.IsNullOrEmpty(conf.Password) ? null : Utility.UnprotectData(conf.Password);
+             BackupDirTB.Text = conf.BackupDir;
         }
 
         private void Login_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Do you want to create a Task", "GDocBackup", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
-            {
-                using (TaskService ts = new TaskService())
-                {
-
-                    // Create a new task definition and assign properties
-                    TaskDefinition td = ts.NewTask();
-                    td.RegistrationInfo.Description = "GDoc Backup";
-
-                    // Create a trigger that will fire the task at this time every other day
-                    DailyTrigger daily = new DailyTrigger();
-                    daily.StartBoundary = Convert.ToDateTime(DateTime.Today.ToShortDateString() + " 16:30:00");
-                    daily.DaysInterval = 1;
-                    td.Triggers.Add(daily);
-                    string appinfo = AppDomain.CurrentDomain.BaseDirectory + AppDomain.CurrentDomain.FriendlyName;
-                    // Create an action that will launch Notepad whenever the trigger fires
-                    td.Actions.Add(new ExecAction(appinfo, null, null));
-
-                    // Register the task in the root folder
-                    ts.RootFolder.RegisterTaskDefinition(@"GDocBackup", td);
-
-                    // Remove the task we just created
-                    //ts.RootFolder.DeleteTask("GDoc Backup");
-                }
-                Process.Start("C:\\Windows\\system32\\taskschd.msc");
-                conf.UserName = UsernameTB.Text;
-                conf.Password = Utility.ProtectData(PasswordTB.Text);
-                conf.BackupDir = BackupDirTB.Text;
-                conf.Save();
-                this.DialogResult = DialogResult.OK;
-                this.Close();
-            }
-            else if (dialogResult == DialogResult.No)
-            {
+           
                 //do something else
                 conf.UserName = UsernameTB.Text;
                 conf.Password = Utility.ProtectData(PasswordTB.Text);
@@ -90,7 +59,7 @@ namespace GDocBackup
                 conf.Save();
                 this.DialogResult = DialogResult.OK;
                 this.Close();
-            }
+            
             
         }
 
@@ -111,6 +80,19 @@ namespace GDocBackup
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog fbd = new FolderBrowserDialog();
+            fbd.SelectedPath = BackupDirTB.Text;
+            if (fbd.ShowDialog() == DialogResult.OK)
+                BackupDirTB.Text = fbd.SelectedPath;
+        }
+
+        private void CbStorePassword_CheckedChanged(object sender, EventArgs e)
+        {
+            this.PasswordTB.ReadOnly = CbStorePassword.Checked;
         }
 
      

@@ -21,12 +21,14 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-
+using log4net;
 
 namespace GDocBackup
 {
+    
     public partial class LogsForm : Form
     {
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         public string[] Logs = null;
 
         public LogsForm()
@@ -43,7 +45,9 @@ namespace GDocBackup
                 foreach (string s in Logs)
                     sb.AppendLine(s);
                 this.textBox1.Text = sb.ToString();
+             
             }
+            log.Info(this.textBox1.Text);
         }
 
         private void btnClose_Click(object sender, EventArgs e)

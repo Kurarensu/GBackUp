@@ -25,6 +25,7 @@ using System.Threading;
 using System.Text.RegularExpressions;
 using System.Reflection;
 using Google.GData.Apps;
+using log4net;
 
 
 namespace GDocBackupLib
@@ -36,6 +37,7 @@ namespace GDocBackupLib
     public class Backup
     {
 
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private Config _config;
 
         private Dictionary<string, string> _folderDict;
@@ -66,6 +68,7 @@ namespace GDocBackupLib
         private void DoFeedback(string message)
         {
             System.Diagnostics.Debug.WriteLine(message);
+            log.Info(message);
             if (Feedback != null)
                 Feedback(this, new FeedbackEventArgs(message, _lastPercent));
         }
@@ -84,6 +87,7 @@ namespace GDocBackupLib
                 _lastPercent = percent;
             }
             System.Diagnostics.Debug.WriteLine(message);
+            log.Info(message);
             if (Feedback != null)
                 Feedback(this, new FeedbackEventArgs(message, _lastPercent));
         }
@@ -91,6 +95,7 @@ namespace GDocBackupLib
         private void DoFeedback(FeedbackObject fo)
         {
             System.Diagnostics.Debug.WriteLine(fo.ToString());
+            log.Info(fo.ToString());
             if (Feedback != null)
                 Feedback(this, new FeedbackEventArgs("", _lastPercent, fo));
         }
@@ -98,6 +103,7 @@ namespace GDocBackupLib
         private void DoFeedbackDebug(string message)
         {
             System.Diagnostics.Debug.WriteLine(message);
+            log.Info(message);
             if (_config.debugMode)
             {
                 if (Feedback != null)

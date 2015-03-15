@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>GDocBackup</RootNamespace>
     <AssemblyName>GDocBackup</AssemblyName>
-    <ApplicationIcon>Resources\Logo.ico</ApplicationIcon>
+    <ApplicationIcon>Logo.ico</ApplicationIcon>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>3.5</OldToolsVersion>
@@ -90,6 +90,7 @@
     <Reference Include="System.IO">
       <HintPath>..\packages\Microsoft.Bcl.1.1.9\lib\net40\System.IO.dll</HintPath>
     </Reference>
+    <Reference Include="System.Management" />
     <Reference Include="System.Net" />
     <Reference Include="System.Net.Http, Version=2.2.22.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -125,7 +126,7 @@
     <Compile Include="AboutForm.Designer.cs">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CheckUpdates.cs" />
+    <Compile Include="Authentication.cs" />
     <Compile Include="ConfigForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,8 +185,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="SendFeedbackForm.resx">
       <SubType>Designer</SubType>
@@ -194,11 +195,6 @@
     <EmbeddedResource Include="SimpleInputBox.resx">
       <DependentUpon>SimpleInputBox.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
@@ -207,6 +203,11 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -219,6 +220,7 @@
     <Compile Include="SendFeedbackForm.Designer.cs">
       <DependentUpon>SendFeedbackForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Settings.cs" />
     <Compile Include="SimpleInputBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -227,10 +229,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Logo.ico" />
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include="Logo.ico" />
     <Content Include="MyDiary.txt" />
+    <None Include="Resources\Logo.ico" />
+    <None Include="Resources\document-save-5.png" />
+    <Content Include="Resources\Image1.png" />
     <None Include="Resources\error_20x20.png" />
     <None Include="Resources\running.gif" />
     <None Include="Resources\warning_20x20.png" />

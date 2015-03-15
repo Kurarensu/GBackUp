@@ -18,3 +18,15 @@ C:\Users\Kurarensu\Desktop\Pending Works\gdocbackup\GDocBackupLib\bin\Debug\Goog
 C:\Users\Kurarensu\Desktop\Pending Works\gdocbackup\GDocBackupLib\obj\Debug\GDocBackupLib.csprojResolveAssemblyReference.cache
 C:\Users\Kurarensu\Desktop\Pending Works\gdocbackup\GDocBackupLib\obj\Debug\GDocBackupLib.dll
 C:\Users\Kurarensu\Desktop\Pending Works\gdocbackup\GDocBackupLib\obj\Debug\GDocBackupLib.pdb
+C:\Users\Kurarensu\Documents\GitHub\GBackUp\GDocBackupLib\bin\Debug\GDocBackupLib.dll
+C:\Users\Kurarensu\Documents\GitHub\GBackUp\GDocBackupLib\bin\Debug\GDocBackupLib.pdb
+C:\Users\Kurarensu\Documents\GitHub\GBackUp\GDocBackupLib\bin\Debug\Google.GData.AccessControl.dll
+C:\Users\Kurarensu\Documents\GitHub\GBackUp\GDocBackupLib\bin\Debug\Google.GData.Apps.dll
+C:\Users\Kurarensu\Documents\GitHub\GBackUp\GDocBackupLib\bin\Debug\Google.GData.Client.dll
+C:\Users\Kurarensu\Documents\GitHub\GBackUp\GDocBackupLib\bin\Debug\Google.GData.Documents.dll
+C:\Users\Kurarensu\Documents\GitHub\GBackUp\GDocBackupLib\bin\Debug\Google.GData.Extensions.dll
+C:\Users\Kurarensu\Documents\GitHub\GBackUp\GDocBackupLib\obj\Debug\GDocBackupLib.dll
+C:\Users\Kurarensu\Documents\GitHub\GBackUp\GDocBackupLib\obj\Debug\GDocBackupLib.pdb
+C:\Users\Kurarensu\Documents\GitHub\GBackUp\GDocBackupLib\bin\Debug\log4net.dll
+C:\Users\Kurarensu\Documents\GitHub\GBackUp\GDocBackupLib\bin\Debug\log4net.xml
+C:\Users\Kurarensu\Documents\GitHub\GBackUp\GDocBackupLib\obj\Debug\GDocBackupLib.csprojResolveAssemblyReference.cache

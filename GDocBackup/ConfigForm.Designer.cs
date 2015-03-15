@@ -29,12 +29,9 @@ namespace GDocBackup
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.TbUsername = new System.Windows.Forms.TextBox();
-            this.TbBackupDir = new System.Windows.Forms.TextBox();
             this.BtnSave = new System.Windows.Forms.Button();
             this.BtnCancel = new System.Windows.Forms.Button();
-            this.BtnSelectDir = new System.Windows.Forms.Button();
             this.cbDocFormat = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cbPresFormat = new System.Windows.Forms.ComboBox();
@@ -104,6 +101,9 @@ namespace GDocBackup
             this.tbMultiExpCalc = new System.Windows.Forms.TextBox();
             this.tbMultiExpDoc = new System.Windows.Forms.TextBox();
             this.tbMultiExpPres = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.BtnSelectDir = new System.Windows.Forms.Button();
+            this.TbBackupDir = new System.Windows.Forms.TextBox();
             this.panelProxy.SuspendLayout();
             this.panelProxy2.SuspendLayout();
             this.panelProxyUserPwd.SuspendLayout();
@@ -129,60 +129,40 @@ namespace GDocBackup
             this.label1.TabIndex = 0;
             this.label1.Text = "Username:";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 208);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Backup directory:";
-            // 
             // TbUsername
             // 
-            this.TbUsername.Location = new System.Drawing.Point(77, 8);
+            this.TbUsername.Location = new System.Drawing.Point(93, 8);
             this.TbUsername.Name = "TbUsername";
-            this.TbUsername.Size = new System.Drawing.Size(98, 20);
+            this.TbUsername.Size = new System.Drawing.Size(165, 20);
             this.TbUsername.TabIndex = 1;
-            // 
-            // TbBackupDir
-            // 
-            this.TbBackupDir.Location = new System.Drawing.Point(124, 205);
-            this.TbBackupDir.Name = "TbBackupDir";
-            this.TbBackupDir.Size = new System.Drawing.Size(165, 20);
-            this.TbBackupDir.TabIndex = 3;
             // 
             // BtnSave
             // 
             this.BtnSave.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.BtnSave.Location = new System.Drawing.Point(131, 444);
+            this.BtnSave.Image = global::GDocBackup.Properties.Resources.document_save_5;
+            this.BtnSave.Location = new System.Drawing.Point(141, 279);
             this.BtnSave.Name = "BtnSave";
-            this.BtnSave.Size = new System.Drawing.Size(84, 29);
+            this.BtnSave.Size = new System.Drawing.Size(79, 39);
             this.BtnSave.TabIndex = 4;
             this.BtnSave.Text = "Save";
+            this.BtnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnSave.UseVisualStyleBackColor = true;
             this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // BtnCancel
             // 
             this.BtnCancel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.BtnCancel.Location = new System.Drawing.Point(221, 444);
+            this.BtnCancel.Image = global::GDocBackup.Properties.Resources.error_20x20;
+            this.BtnCancel.Location = new System.Drawing.Point(247, 279);
             this.BtnCancel.Name = "BtnCancel";
-            this.BtnCancel.Size = new System.Drawing.Size(84, 30);
+            this.BtnCancel.Size = new System.Drawing.Size(84, 39);
             this.BtnCancel.TabIndex = 5;
             this.BtnCancel.Text = "Cancel";
+            this.BtnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnCancel.UseVisualStyleBackColor = true;
             this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
-            // 
-            // BtnSelectDir
-            // 
-            this.BtnSelectDir.Location = new System.Drawing.Point(295, 205);
-            this.BtnSelectDir.Name = "BtnSelectDir";
-            this.BtnSelectDir.Size = new System.Drawing.Size(31, 20);
-            this.BtnSelectDir.TabIndex = 6;
-            this.BtnSelectDir.Text = "-->";
-            this.BtnSelectDir.UseVisualStyleBackColor = true;
-            this.BtnSelectDir.Click += new System.EventHandler(this.BtnSelectDir_Click);
             // 
             // cbDocFormat
             // 
@@ -246,16 +226,16 @@ namespace GDocBackup
             // 
             // TbPassword
             // 
-            this.TbPassword.Location = new System.Drawing.Point(77, 34);
+            this.TbPassword.Location = new System.Drawing.Point(93, 34);
             this.TbPassword.Name = "TbPassword";
             this.TbPassword.PasswordChar = '*';
-            this.TbPassword.Size = new System.Drawing.Size(98, 20);
+            this.TbPassword.Size = new System.Drawing.Size(165, 20);
             this.TbPassword.TabIndex = 2;
             // 
             // CbStorePassword
             // 
             this.CbStorePassword.AutoSize = true;
-            this.CbStorePassword.Location = new System.Drawing.Point(181, 36);
+            this.CbStorePassword.Location = new System.Drawing.Point(264, 37);
             this.CbStorePassword.Name = "CbStorePassword";
             this.CbStorePassword.Size = new System.Drawing.Size(77, 17);
             this.CbStorePassword.TabIndex = 9;
@@ -433,16 +413,16 @@ namespace GDocBackup
             // 
             // tabControl1
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPageNormalExport);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(414, 424);
+            this.tabControl1.Size = new System.Drawing.Size(414, 261);
             this.tabControl1.TabIndex = 11;
             // 
             // tabPage1
@@ -452,33 +432,33 @@ namespace GDocBackup
             this.tabPage1.Controls.Add(this.panelRunModeGoogleApps);
             this.tabPage1.Controls.Add(this.cbDisableDuplicatedItemsWarning);
             this.tabPage1.Controls.Add(this.label15);
-            this.tabPage1.Controls.Add(this.TbDateDelta);
             this.tabPage1.Controls.Add(this.cbCheckForBetaVersion);
             this.tabPage1.Controls.Add(this.cbBypassCertificatesCheck);
             this.tabPage1.Controls.Add(this.cbDisableUpdateCheck);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.BtnSelectDir);
-            this.tabPage1.Controls.Add(this.TbBackupDir);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(406, 398);
+            this.tabPage1.Size = new System.Drawing.Size(406, 235);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Main";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // panelRunModeNormal
             // 
             this.panelRunModeNormal.BackColor = System.Drawing.Color.AliceBlue;
             this.panelRunModeNormal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelRunModeNormal.Controls.Add(this.label2);
+            this.panelRunModeNormal.Controls.Add(this.BtnSelectDir);
+            this.panelRunModeNormal.Controls.Add(this.TbBackupDir);
             this.panelRunModeNormal.Controls.Add(this.TbUsername);
             this.panelRunModeNormal.Controls.Add(this.TbPassword);
             this.panelRunModeNormal.Controls.Add(this.label6);
             this.panelRunModeNormal.Controls.Add(this.CbStorePassword);
             this.panelRunModeNormal.Controls.Add(this.label1);
-            this.panelRunModeNormal.Location = new System.Drawing.Point(6, 38);
+            this.panelRunModeNormal.Location = new System.Drawing.Point(3, 6);
             this.panelRunModeNormal.Name = "panelRunModeNormal";
-            this.panelRunModeNormal.Size = new System.Drawing.Size(325, 66);
+            this.panelRunModeNormal.Size = new System.Drawing.Size(346, 102);
             this.panelRunModeNormal.TabIndex = 26;
             // 
             // panel2
@@ -490,6 +470,7 @@ namespace GDocBackup
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(239, 26);
             this.panel2.TabIndex = 25;
+            this.panel2.Visible = false;
             // 
             // rbRunModeNormal
             // 
@@ -533,9 +514,9 @@ namespace GDocBackup
             this.panelRunModeGoogleApps.Controls.Add(this.TbDomain);
             this.panelRunModeGoogleApps.Controls.Add(this.label18);
             this.panelRunModeGoogleApps.Controls.Add(this.TbOAuthSecret);
-            this.panelRunModeGoogleApps.Location = new System.Drawing.Point(30, 116);
+            this.panelRunModeGoogleApps.Location = new System.Drawing.Point(15, 110);
             this.panelRunModeGoogleApps.Name = "panelRunModeGoogleApps";
-            this.panelRunModeGoogleApps.Size = new System.Drawing.Size(301, 147);
+            this.panelRunModeGoogleApps.Size = new System.Drawing.Size(301, 79);
             this.panelRunModeGoogleApps.TabIndex = 19;
             // 
             // panelGAppsUserName
@@ -646,7 +627,7 @@ namespace GDocBackup
             // 
             // TbDateDelta
             // 
-            this.TbDateDelta.Location = new System.Drawing.Point(124, 231);
+            this.TbDateDelta.Location = new System.Drawing.Point(141, 284);
             this.TbDateDelta.Name = "TbDateDelta";
             this.TbDateDelta.Size = new System.Drawing.Size(37, 20);
             this.TbDateDelta.TabIndex = 12;
@@ -689,7 +670,7 @@ namespace GDocBackup
             this.tabPageNormalExport.Location = new System.Drawing.Point(4, 22);
             this.tabPageNormalExport.Name = "tabPageNormalExport";
             this.tabPageNormalExport.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageNormalExport.Size = new System.Drawing.Size(406, 398);
+            this.tabPageNormalExport.Size = new System.Drawing.Size(406, 235);
             this.tabPageNormalExport.TabIndex = 1;
             this.tabPageNormalExport.Text = "Export format";
             this.tabPageNormalExport.UseVisualStyleBackColor = true;
@@ -826,7 +807,7 @@ namespace GDocBackup
             this.tabPage3.Controls.Add(this.cbSetProxy);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(406, 398);
+            this.tabPage3.Size = new System.Drawing.Size(406, 235);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Proxy";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -852,14 +833,42 @@ namespace GDocBackup
             this.tbMultiExpPres.Size = new System.Drawing.Size(142, 20);
             this.tbMultiExpPres.TabIndex = 0;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(2, 63);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 13);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Backup directory:";
+            // 
+            // BtnSelectDir
+            // 
+            this.BtnSelectDir.Location = new System.Drawing.Point(264, 56);
+            this.BtnSelectDir.Name = "BtnSelectDir";
+            this.BtnSelectDir.Size = new System.Drawing.Size(77, 23);
+            this.BtnSelectDir.TabIndex = 12;
+            this.BtnSelectDir.Text = "Open";
+            this.BtnSelectDir.UseVisualStyleBackColor = true;
+            // 
+            // TbBackupDir
+            // 
+            this.TbBackupDir.Location = new System.Drawing.Point(93, 59);
+            this.TbBackupDir.Name = "TbBackupDir";
+            this.TbBackupDir.ReadOnly = true;
+            this.TbBackupDir.Size = new System.Drawing.Size(165, 20);
+            this.TbBackupDir.TabIndex = 11;
+            this.TbBackupDir.TextChanged += new System.EventHandler(this.TbBackupDir_TextChanged);
+            // 
             // ConfigForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(436, 481);
+            this.ClientSize = new System.Drawing.Size(436, 330);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.BtnCancel);
             this.Controls.Add(this.BtnSave);
+            this.Controls.Add(this.TbDateDelta);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -895,18 +904,16 @@ namespace GDocBackup
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TbUsername;
-        private System.Windows.Forms.TextBox TbBackupDir;
         private System.Windows.Forms.Button BtnSave;
         private System.Windows.Forms.Button BtnCancel;
-        private System.Windows.Forms.Button BtnSelectDir;
         private System.Windows.Forms.ComboBox cbDocFormat;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -976,5 +983,8 @@ namespace GDocBackup
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Panel panelGAppsUserName;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button BtnSelectDir;
+        private System.Windows.Forms.TextBox TbBackupDir;
     }
 }

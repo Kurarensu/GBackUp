@@ -13,9 +13,7 @@ namespace GDocBackup
 {
     public partial class AboutForm : Form
     {
-        private bool _newveravailable;
-        private bool _newversionerror;
-        private Version _newversion;
+  
 
 
         public AboutForm()
@@ -33,10 +31,6 @@ namespace GDocBackup
             LblVersion.Text += gdocbakcupVersion;
             LblGoogleVer.Text = "google-gdata ver. " + googleLibVersion;
 
-            Thread checkNewVersionThrd = new Thread(ExecCheckNewVersion);
-            checkNewVersionThrd.Name = "CheckNewVersionExists";
-            checkNewVersionThrd.IsBackground = true;
-            checkNewVersionThrd.Start();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -46,38 +40,6 @@ namespace GDocBackup
             catch (Exception) { }
         }
 
-        private void ExecCheckNewVersion()
-        {
-            Version localVersion;
-            _newveravailable = CheckUpdates.Exec(out localVersion, out _newversion, out _newversionerror);
-            try
-            {
-                this.BeginInvoke((MethodInvoker)delegate() { this.ShowCheckNewVersionResult(); });
-            }
-            catch (Exception) { }   // the form could be closed during thread run
-        }
-
-        private void ShowCheckNewVersionResult()
-        {
-            if (_newversionerror)
-            {
-                lblCheckNewVer.Text = "Error detecting latest available version.";
-                pictRotor.Image = Properties.Resources.error_20x20;
-            }
-            else
-            {
-                if (_newveravailable)
-                {
-                    lblCheckNewVer.Text = "A new version is available (" + _newversion.ToString() + ")";
-                    pictRotor.Image = Properties.Resources.warning_20x20;
-                }
-                else
-                {
-                    lblCheckNewVer.Text = "You have the latest version.";
-                    pictRotor.Image = Properties.Resources.ok_20x20;
-                }
-            }
-        }
 
     }
 }

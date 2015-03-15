@@ -200,6 +200,9 @@ namespace GDocBackup
             conf.ProxyUsername = tbProxyLogin.Text;
             conf.ProxyPassword = String.IsNullOrEmpty(tbProxyPassword.Text) ? null : Utility.ProtectData(tbProxyPassword.Text);
 
+            MainForm login = new MainForm();
+            login.useraccount = conf.UserName;
+           
             // Save configuration
             conf.Save();
             this.DialogResult = DialogResult.OK;
@@ -261,7 +264,7 @@ namespace GDocBackup
         private void SetAllControlStatus()
         {
             // Username & password tab
-            TbPassword.Enabled = CbStorePassword.Checked;
+            TbPassword.ReadOnly = CbStorePassword.Checked;
 
             // Proxy tab
             panelProxy.Enabled = cbSetProxy.Checked;
@@ -370,6 +373,16 @@ namespace GDocBackup
         private void cbUseOnlyOauth_CheckedChanged(object sender, EventArgs e)
         {
             panelGAppsUserName.Visible = !cbUseOnlyOauth.Checked;
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TbBackupDir_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
     }

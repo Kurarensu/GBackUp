@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GDocBackup", "GDocBackup\GDocBackup.csproj", "{F83C7F69-C33D-4C99-B278-AF8EE67013D1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GDocBackupCMD", "GDocBackupCMD\GDocBackupCMD.csproj", "{FE34A3C5-FFC2-4463-A411-71A3B0BC3BB9}"
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevApp", "DevApp\DevApp.csproj", "{2D513C45-B6CD-4B76-B48A-CB87774430D5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevAppGUI", "DevAppGUI\DevAppGUI.csproj", "{220D99AA-56CF-4AD6-A3E6-062BB29D3E81}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A21C9D52-5413-455F-8CF1-FC02344C04CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

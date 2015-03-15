@@ -29,6 +29,7 @@ namespace GDocBackup
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.BtnExec = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -45,12 +46,6 @@ namespace GDocBackup
             this.techDocListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGV = new System.Windows.Forms.DataGridView();
-            this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Export = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnAction = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnLocalData = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BtnCancel = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -63,20 +58,24 @@ namespace GDocBackup
             this.lblerror = new System.Windows.Forms.Label();
             this.lblCompleteBackup = new System.Windows.Forms.Label();
             this.lblCopied = new System.Windows.Forms.Label();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGV)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnExec
             // 
             this.BtnExec.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.BtnExec.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnExec.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnExec.ForeColor = System.Drawing.Color.Black;
-            this.BtnExec.Location = new System.Drawing.Point(528, 310);
+            this.BtnExec.Image = global::GDocBackup.Properties.Resources.document_save_5;
+            this.BtnExec.Location = new System.Drawing.Point(610, 316);
             this.BtnExec.Name = "BtnExec";
             this.BtnExec.Size = new System.Drawing.Size(93, 34);
             this.BtnExec.TabIndex = 0;
             this.BtnExec.Text = "&Save";
+            this.BtnExec.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnExec.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnExec.UseVisualStyleBackColor = true;
             this.BtnExec.Click += new System.EventHandler(this.BtnExec_Click);
             // 
@@ -105,6 +104,7 @@ namespace GDocBackup
             this.downloadToolStripMenuItem,
             this.downloadAllagainToolStripMenuItem,
             this.toolStripSeparator1,
+            this.toolStripMenuItem1,
             this.configToolStripMenuItem1,
             this.logsToolStripMenuItem,
             this.aboutToolStripMenuItem,
@@ -196,70 +196,19 @@ namespace GDocBackup
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
-            // dataGV
-            // 
-            this.dataGV.AllowUserToAddRows = false;
-            this.dataGV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColumnName,
-            this.ColumnType,
-            this.Export,
-            this.ColumnAction,
-            this.ColumnLocalData});
-            this.dataGV.Location = new System.Drawing.Point(134, 91);
-            this.dataGV.Name = "dataGV";
-            this.dataGV.ReadOnly = true;
-            this.dataGV.Size = new System.Drawing.Size(668, 189);
-            this.dataGV.TabIndex = 5;
-            // 
-            // ColumnName
-            // 
-            this.ColumnName.HeaderText = "Name";
-            this.ColumnName.Name = "ColumnName";
-            this.ColumnName.ReadOnly = true;
-            this.ColumnName.Width = 150;
-            // 
-            // ColumnType
-            // 
-            this.ColumnType.HeaderText = "Type";
-            this.ColumnType.Name = "ColumnType";
-            this.ColumnType.ReadOnly = true;
-            this.ColumnType.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // Export
-            // 
-            this.Export.HeaderText = "Export";
-            this.Export.Name = "Export";
-            this.Export.ReadOnly = true;
-            this.Export.Width = 50;
-            // 
-            // ColumnAction
-            // 
-            this.ColumnAction.HeaderText = "Action";
-            this.ColumnAction.Name = "ColumnAction";
-            this.ColumnAction.ReadOnly = true;
-            this.ColumnAction.Width = 50;
-            // 
-            // ColumnLocalData
-            // 
-            this.ColumnLocalData.HeaderText = "Data";
-            this.ColumnLocalData.Name = "ColumnLocalData";
-            this.ColumnLocalData.ReadOnly = true;
-            // 
             // BtnCancel
             // 
             this.BtnCancel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.BtnCancel.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCancel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCancel.ForeColor = System.Drawing.Color.Black;
-            this.BtnCancel.Location = new System.Drawing.Point(623, 310);
+            this.BtnCancel.Image = global::GDocBackup.Properties.Resources.error_20x20;
+            this.BtnCancel.Location = new System.Drawing.Point(709, 316);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(93, 34);
             this.BtnCancel.TabIndex = 6;
             this.BtnCancel.Text = "&Cancel";
+            this.BtnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnCancel.UseVisualStyleBackColor = true;
             this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
@@ -335,6 +284,7 @@ namespace GDocBackup
             // 
             // trvFolders
             // 
+            this.trvFolders.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.trvFolders.Location = new System.Drawing.Point(0, 91);
             this.trvFolders.Name = "trvFolders";
             this.trvFolders.Size = new System.Drawing.Size(128, 189);
@@ -367,12 +317,34 @@ namespace GDocBackup
             this.lblCopied.Size = new System.Drawing.Size(0, 15);
             this.lblCopied.TabIndex = 17;
             // 
+            // listView1
+            // 
+            this.listView1.CheckBoxes = true;
+            this.listView1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView1.FullRowSelect = true;
+            this.listView1.GridLines = true;
+            this.listView1.Location = new System.Drawing.Point(134, 91);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(668, 189);
+            this.listView1.Sorting = System.Windows.Forms.SortOrder.Ascending;
+            this.listView1.TabIndex = 18;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(241, 22);
+            this.toolStripMenuItem1.Text = "Create a Schedule Task";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(817, 362);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.lblCopied);
             this.Controls.Add(this.lblCompleteBackup);
             this.Controls.Add(this.lblerror);
@@ -385,10 +357,10 @@ namespace GDocBackup
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnCancel);
-            this.Controls.Add(this.dataGV);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.BtnExec);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(400, 210);
             this.Name = "MainForm";
@@ -397,7 +369,6 @@ namespace GDocBackup
             this.Shown += new System.EventHandler(this.MainForm_Shown);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -413,18 +384,12 @@ namespace GDocBackup
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem configToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.DataGridView dataGV;
         private System.Windows.Forms.ToolStripMenuItem logsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem downloadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem downloadAllagainToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem debugModeToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Export;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnAction;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnLocalData;
         private System.Windows.Forms.ToolStripMenuItem techSupportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem techDocListToolStripMenuItem;
         private System.Windows.Forms.Button BtnCancel;
@@ -439,6 +404,8 @@ namespace GDocBackup
         private System.Windows.Forms.Label lblerror;
         private System.Windows.Forms.Label lblCompleteBackup;
         private System.Windows.Forms.Label lblCopied;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }
 

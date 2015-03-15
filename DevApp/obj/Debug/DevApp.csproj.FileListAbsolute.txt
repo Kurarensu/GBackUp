@@ -7,3 +7,12 @@ C:\Users\Kurarensu\Desktop\Pending Works\Gbackup\gdocbackup\DevApp\bin\Debug\Goo
 C:\Users\Kurarensu\Desktop\Pending Works\Gbackup\gdocbackup\DevApp\obj\Debug\DevApp.csprojResolveAssemblyReference.cache
 C:\Users\Kurarensu\Desktop\Pending Works\Gbackup\gdocbackup\DevApp\obj\Debug\DevApp.exe
 C:\Users\Kurarensu\Desktop\Pending Works\Gbackup\gdocbackup\DevApp\obj\Debug\DevApp.pdb
+C:\Users\Kurarensu\Documents\GitHub\GBackUp\DevApp\bin\Debug\DevApp.exe
+C:\Users\Kurarensu\Documents\GitHub\GBackUp\DevApp\bin\Debug\DevApp.pdb
+C:\Users\Kurarensu\Documents\GitHub\GBackUp\DevApp\bin\Debug\Google.GData.AccessControl.dll
+C:\Users\Kurarensu\Documents\GitHub\GBackUp\DevApp\bin\Debug\Google.GData.Client.dll
+C:\Users\Kurarensu\Documents\GitHub\GBackUp\DevApp\bin\Debug\Google.GData.Documents.dll
+C:\Users\Kurarensu\Documents\GitHub\GBackUp\DevApp\bin\Debug\Google.GData.Extensions.dll
+C:\Users\Kurarensu\Documents\GitHub\GBackUp\DevApp\obj\Debug\DevApp.csprojResolveAssemblyReference.cache
+C:\Users\Kurarensu\Documents\GitHub\GBackUp\DevApp\obj\Debug\DevApp.exe
+C:\Users\Kurarensu\Documents\GitHub\GBackUp\DevApp\obj\Debug\DevApp.pdb
